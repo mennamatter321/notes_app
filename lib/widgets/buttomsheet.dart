@@ -23,7 +23,7 @@ class Buttomsheet extends StatelessWidget {
             ),
             Textfield(
               hint: 'content',
-              maxlines: 10,
+              maxLines: 5,
             ),
             SizedBox(
               height: 16,

@@ -2,19 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:notesapp/widgets/constants.dart';
 
 class Textfield extends StatelessWidget {
-  const Textfield({super.key, required this.hint, this.maxlines = 1});
+  const Textfield({super.key, required this.hint, this.maxLines = 1});
   final String hint;
-  final int maxlines;
+  final int maxLines;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         TextField(
+          maxLines: maxLines,
           cursorColor: kPrimarycolor,
           decoration: InputDecoration(
             hintText: hint,
-            hintMaxLines: maxlines,
             hintStyle: const TextStyle(color: kPrimarycolor),
             border: buildborder(),
             enabledBorder: buildborder(),
