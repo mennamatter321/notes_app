@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notesapp/widgets/button.dart';
 import 'package:notesapp/widgets/textfield.dart';
 
 class Buttomsheet extends StatelessWidget {
@@ -6,10 +7,9 @@ class Buttomsheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 200,
-      child: const Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.0),
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.0),
+      child: SingleChildScrollView(
         child: Column(
           children: [
             SizedBox(
@@ -23,20 +23,18 @@ class Buttomsheet extends StatelessWidget {
             ),
             Textfield(
               hint: 'content',
-              maxlines: 5,
+              maxlines: 10,
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            Custombutton(),
+            SizedBox(
+              height: 16,
             )
           ],
         ),
       ),
     );
-  }
-}
-
-class Custombutton extends StatelessWidget {
-  const Custombutton({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }
